@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ═══ Exact Mobile App Font: Roboto Condensed Light ═══ */
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('/fonts/RobotoCondensed-Light.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ═══ Global Design System Tokens ═══ */
+  --pmg-primary: #6B58D6;
+  --pmg-primary-hover: #5845C2;
+  --pmg-primary-light: #8877E3;
+  --pmg-primary-lighter: #A89AEA;
+  --pmg-primary-dark: #4936B3;
+  --pmg-dark-navy: #1E1742;
+  --pmg-text-primary: #1E1742;
+  --pmg-text-secondary: #6B7280;
+  --pmg-text-muted: #A89AEA;
+  --pmg-bg-light: #FFFFFF;
+  --pmg-surface: #FFFFFF;
+  --pmg-surface-light: #F5F3FF;
+  --pmg-border: #E3DEFC;
+  --pmg-border-light: #EDE9FE;
+  --pmg-tip-bg: rgba(107, 88, 214, 0.08);
+  --pmg-success: #10B981;
+  --pmg-warning: #F59E0B;
+  --pmg-error: #EF4444;
+  --pmg-info: #3B82F6;
+  --pmg-card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  --pmg-card-shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-variation-settings: 'wght' 380;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--pmg-bg-light);
+  color: var(--pmg-text-primary);
+}
+
+h1, h2, h3, h4, .font-bold, .font-semibold, .font-extrabold {
+  font-variation-settings: 'wght' 460;
+}
+
+.font-medium {
+  font-variation-settings: 'wght' 420;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ═══ Global Animations ═══ */
+@keyframes pmg-fadein {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pmg-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-pmg-fadein {
+  animation: pmg-fadein 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E3DEFC;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A89AEA;
+}
+
+/* Hide visible scrollbars while preserving scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

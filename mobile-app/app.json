@@ -1,0 +1,74 @@
+{
+  "expo": {
+    "name": "Price My Gem",
+    "slug": "pricemygem",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pricemygem.app",
+      "splash": {
+        "image": "./assets/splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#6B58D6"
+      },
+      "package": "com.pricemygem.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "splash": {
+        "image": "./assets/splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#FFFFFF",
+        "mdpi": "./assets/splash.png",
+        "hdpi": "./assets/splash.png",
+        "xhdpi": "./assets/splash.png",
+        "xxhdpi": "./assets/splash.png",
+        "xxxhdpi": "./assets/splash.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FFFFFF",
+          "image": "./assets/splash.png",
+          "imageWidth": 200
+        }
+      ],
+      "expo-status-bar",
+      "expo-font",
+      "expo-camera",
+      "expo-image-picker",
+      "./plugins/withCleartextTraffic"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "46c26347-33f6-4425-a7a9-91ff74a18c45"
+      }
+    }
+  }
+}
